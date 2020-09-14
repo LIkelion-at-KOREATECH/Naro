@@ -14,10 +14,6 @@ $ pip install pillow
 $ python manage.py migrate
 
 $ python manage.py runserver
-<<<<<<< HEAD
-=======
-
->>>>>>> 7ba72ca6ce439b1aad65643ad028f39a926b4006
 
 ### 본인 브랜치 명
 

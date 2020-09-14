@@ -4,7 +4,7 @@
 ![ver](https://img.shields.io/badge/ver-pillow-blue.svg)
 
 ### 사용법
-'''
+
 $ git clone "https://github.com/LIkelion-at-KOREATECH/Naro.git"
 
 $ pip install django
@@ -14,7 +14,6 @@ $ pip install pillow
 $ python manage.py migrate
 
 $ python manage.py runserver
-'''
 
 ### 본인 브랜치 명
 

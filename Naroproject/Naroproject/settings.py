@@ -122,3 +122,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#STATIC File을 위한 경로 설정 및 디렉토리 설정
+
+STATICFILES_DIRS = [
+    Path(BASE_DIR, 'Accounts','static'),
+    Path(BASE_DIR, 'Main', 'static'),
+]
+
+STATIC_ROOT = Path(BASE_DIR, 'static')

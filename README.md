@@ -20,10 +20,10 @@ $ python manage.py runserver
  - 임우열 : W_branch
  - 배수빈 : B_branch
  - 문찬웅 : M_branch
- - developer : mater 배보 전 점검 프랜치
+ - developer : mater 배포 전 점검 branch
 
  ### 개발 기능
 
  - 임우열 : 회원가입 및 로그인
- - 배수빈 : main_bf_login, main_af_login
+ - 배수빈 : main_bf_login, main_af_login (메인 화면)
  - 문찬웅 : Css 및 Design

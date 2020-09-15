@@ -123,10 +123,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#STATIC File을 위한 경로 설정 및 디렉토리 설정
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'Main', 'static')
+    Path(BASE_DIR, 'Accounts','static'),
+    Path(BASE_DIR, 'Main', 'static'),
 ]
 
-
-# static파일 한방에 모으기
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = Path(BASE_DIR, 'static')

@@ -13,8 +13,8 @@ header {
     position: fixed; z-index: 99;
     top: 0; left: 0; right: 0;
     padding: 50px;
-    transform: translateY(-100px);
-    transition: transform ls ease;
+    /* transform: translateY(-100px); */
+    /* transition: transform ls ease; */
 }
 header .active {transform: translateY(0);}
 header h1 {
@@ -40,15 +40,15 @@ main::before{
     transform: scale(1.2); /*배경크기 키움*/
     transition: all ls linear;
 }
-main::after {
+/* main::after {
     content: "";
     position: absolute; z-index: 3;
     top: 0; right: 0; bottom: 0; left: 0;
     background: #000;
     opacity: 1;
     transition: all ls linear;
-}
-main.active::after {opacity: 0;}
+} */
+/* main.active::after {opacity: 0;} */
 main .container {
     position: absolute;
     top: 50; left: 0; right: 0;

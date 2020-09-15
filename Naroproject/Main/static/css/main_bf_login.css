@@ -1,0 +1,67 @@
+/* 폰트 찾아서 url import하기 //형식: @import url(''); */
+
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {height: 100vh; overflow: hidden;}
+
+.container {
+    max-width: 1200px; margin: 0 auto;
+    position: relative;
+}
+
+header {
+    position: fixed; z-index: 99;
+    top: 0; left: 0; right: 0;
+    padding: 50px;
+    transform: translateY(-100px);
+    transition: transform ls ease;
+}
+header .active {transform: translateY(0);}
+header h1 {
+    font-size: 24px; color: #fff;
+}
+header nav {
+    position: absolute; z-index: 2;
+    top: 0; right: 0;
+}
+header nav a {
+    font-size: 16px; color: aliceblue;
+    display: inline-block; vertical-align: middle;
+    padding: 5px; margin: 0 10px;
+}
+main,
+main::before {height: 100vh;}
+main::before{
+    content: "";
+    display: block;
+    height: 100vh;
+    background: url("MainPage.png") no-repeat center;
+    background-size: cover;
+    transform: scale(1.2); /*배경크기 키움*/
+    transition: all ls linear;
+}
+main::after {
+    content: "";
+    position: absolute; z-index: 3;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: #000;
+    opacity: 1;
+    transition: all ls linear;
+}
+main.active::after {opacity: 0;}
+main .container {
+    position: absolute;
+    top: 50; left: 0; right: 0;
+    transform: translateY(-50%);
+    padding: 50px;
+}
+main p{
+    font-size: 72px; color: #fff;
+    transition: all ls ease;
+    opacity: 0;
+}
+main p:nth-child(1) {transform: translateY(50px);}
+main p:nth-child(2) {transform: translateY(75px);}
+main p:nth-child(3) {transform: translateY(100px);}
+main.active p {opacity: 1; transform: translateY(0);}
+

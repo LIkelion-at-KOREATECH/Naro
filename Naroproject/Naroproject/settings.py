@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -58,7 +59,11 @@ ROOT_URLCONF = 'Naroproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [  
+                    Path(BASE_DIR, 'Accounts','templates'),
+                    Path(BASE_DIR, 'Main', 'templates'),
+                    
+                    ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,7 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# 한국어 지원
+LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'UTC'
 
@@ -131,3 +137,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = Path(BASE_DIR, 'static')
+
+# 해당 경로를 main_bf_login & main_af_login
+LOGIN_REDIRECT_URL = '/main_af_login'
+LOGOUT_REDIRECT_URL = '/'

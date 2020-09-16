@@ -3,15 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Naro SignUp Page</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 </head>
 <body>
-    <form method = "POST">
-    {% csrf_token %}
-        {{regi_form}}
-    </form>
-    <input type="submit" value = "회원가입">
-    회원가입 페이지 입니다.
+
+<form  class = "box" method = "POST">
+{% csrf_token %}
+<h1>Sign Up</h1>
+        {{form}}
+<input type="submit" value = "회원가입">
+</form>
 </body>
+
 </html>

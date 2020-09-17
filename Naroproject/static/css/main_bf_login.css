@@ -33,7 +33,7 @@ header nav a {
 main{
     display: block;
     height: 100vh;
-    background-image: url(/static/images/MainPage.png); 
+    background-image: url(/Naroproject/Main/static/images/MainPage.png) no-repeat center; 
     background-size: cover;
 }
 /* main::before {height: 100vh;} */

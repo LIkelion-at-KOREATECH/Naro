@@ -1,8 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
-
+from django.contrib.auth.models import AbstractBaseUser
+from django.utils import timezone
 # Create your models here.
-class myUser(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    The_date_of_ones_birth = models.DateTimeField(default='1950-01-01')
-    email = models.CharField(max_length=40, default='example@example.com')
+
+class User(AbstractBaseUser):
+
+    email = models.EmailField(max_length= 255, unique=True, primary_key=True)
+    date_of_birth = models.DateField(default = timezone.now)
+
+    USERNAME_FIELD = 'email'

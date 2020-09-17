@@ -10,8 +10,10 @@ def signup(request):
     if request.method == "POST":
         # POST일때 객체 생성
         signup_form = SignUpForm(request.POST)
+        print(signup_form)
         # 해당 폼의 유효성 검사가 유효하면 user_instance에 signup_form을 저장한다.
         if signup_form.is_valid():
+            print("Success")
             # 하지만 아래에서 또 한번 저장이 있으므로  중복 저장을 피하기 위해 commit=Flase
             user_instance = signup_form.save(commit = False)
             # Set_password 및 cleaned_data를 통해 유효한 문자만 남긴 상태를 저장한다. 또한 암호화한다.
@@ -21,4 +23,5 @@ def signup(request):
             return redirect(request, 'login', {'username':user_instance.username})
         else:
             signup_form = SignUpForm()
+            print("Fail")
     return render(request, 'registration/signup.html', {'form':signup_form.as_p})

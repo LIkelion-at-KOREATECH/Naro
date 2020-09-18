@@ -66,6 +66,11 @@ main form{
     left: 47%;
 }
 
+body main a{
+    background-color: rgb(57, 217, 238);
+    transition: background-color .5s;
+}
+
 .a:hover{
     background-color: powderblue;
     transition: background-color .5s;

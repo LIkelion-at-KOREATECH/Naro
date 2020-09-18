@@ -72,3 +72,11 @@ main.active p {opacity: 1; transform: translateY(0);}
     padding: 50px;
 }
 
+.bubble{
+    position: absolute;
+    width: 530px;
+    height: 390px;
+    top: 43%;
+    left: 60%;
+}
+

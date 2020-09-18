@@ -2,12 +2,7 @@
 /* font-family: 'Noto Sans KR', sans-serif; */
 
 * {margin: 0; padding: 0; box-sizing: border-box;}
-body {height: 100vh; overflow: hidden;}
-
-/* .container {
-    max-width: 1200px; margin: 0px auto;
-    position: relative;
-} */
+body {height: 100%; overflow: hidden;}
 
 .container {
     max-width: 1200px;
@@ -18,7 +13,7 @@ header {
     position: fixed; z-index: 99;
     top: 0; left: 0; right: 0;
     padding: 50px;
-    transform: translateY(-100px);
+    /* transform: translateY(-100px); */
     transition: all 1s ease;
 }
 header .active {transform: translateY(0);}
@@ -34,14 +29,13 @@ header nav a {
     display: inline-block; vertical-align: middle;
     padding: 5px; margin: 0 10px;
 }
-
 main::before{
     content: "";
     display: block;
     height: 100vh;
     background: url(/static/images/MainPage.png) no-repeat center;
     background-size: cover;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transition: all 1s linear;
 }
 main::after {
@@ -50,12 +44,12 @@ main::after {
     top: 0; right: 0; bottom: 0; left: 0;
     background: #000;
     background-size: cover;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     opacity: 1;
     transition: all 1s linear;
 }
 main.active::after {opacity: 0;}
-main .container {
+main >.container {
     position: absolute;
     top: 45vh; left: 0; right: 0;
     transform: translateY(-50%);
@@ -70,4 +64,11 @@ main p:nth-child(1) {transform: translateY(50px);}
 main p:nth-child(2) {transform: translateY(75px);}
 main p:nth-child(3) {transform: translateY(100px);}
 main.active p {opacity: 1; transform: translateY(0);}
+.go_login{
+    position: absolute;
+    bottom: 0vh;
+    left: 0;
+    right: 0;
+    padding: 50px;
+}
 

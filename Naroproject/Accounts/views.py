@@ -12,7 +12,6 @@ def signup(request):
         signup_form = SignUpForm(request.POST)
         # 해당 폼의 유효성 검사가 유효하면 user_instance에 signup_form을 저장한다.
         if signup_form.is_valid():
-            print("Success")
             # 하지만 아래에서 또 한번 저장이 있으므로  중복 저장을 피하기 위해 commit=Flase
             user_instance = signup_form.save(commit = False)
             # Set_password 및 cleaned_data를 통해 유효한 문자만 남긴 상태를 저장한다. 또한 암호화한다.
@@ -21,7 +20,5 @@ def signup(request):
             # render 뒤쪽에 {'username':user_instance.username}을 넣어서 username이 나오도록 구현해준다.
             return redirect('login')
         else:
-            # signup_form = SignUpForm()
-            print("Fail")
-            print(signup_form)
+            signup_form = SignUpForm(request.POST)
     return render(request, 'registration/signup.html', {'form':signup_form.as_p})

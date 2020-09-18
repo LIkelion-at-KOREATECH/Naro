@@ -4,11 +4,6 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 body {height: 100vh; overflow: hidden;}
 
-/* .container {
-    max-width: 1200px; margin: 0px auto;
-    position: relative;
-} */
-
 .container {
     max-width: 1200px;
     position: relative;
@@ -34,15 +29,7 @@ header nav a {
     display: inline-block; vertical-align: middle;
     padding: 5px; margin: 0 10px;
 }
-main,
-/* main{
-    display: block;
-    height: 100vh;
-    background-image: url(/static/images/MainPage.png); 
-    background-size: cover;
-} */
-main::before {height: 100vh;}
- main::before{
+main::before{
     content: "";
     display: block;
     height: 100vh;
@@ -77,4 +64,3 @@ main p:nth-child(1) {transform: translateY(50px);}
 main p:nth-child(2) {transform: translateY(75px);}
 main p:nth-child(3) {transform: translateY(100px);}
 main.active p {opacity: 1; transform: translateY(0);}
-

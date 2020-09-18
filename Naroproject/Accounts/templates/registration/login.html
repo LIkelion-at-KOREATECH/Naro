@@ -2,23 +2,27 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>َNaro Login Page</title>
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-  </head>
-  <body>
 
-<form class="box" method="POST">
-{% csrf_token %}
-  <h1>Log in</h1>
-  <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" placeholder="Username">
-  <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Password">
-  <div class = "input" style="display: flex;">
-  <input type="submit" name="" value="로그인" style="flex:1" >
-  <input type="submit" value="회원가입" onclick="location.href='{% url 'signup' %}'" style ="flex:1">
-  </div>
-</form>
+<head>
+  <meta charset="utf-8">
+  <title>َNaro Login Page</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+  <form class="box" method="POST">
+    {% csrf_token %}
+    <h1>Log in</h1>
+    <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150"
+      required="" id="id_username" placeholder="Username">
+    <input type="password" name="password" autocomplete="current-password" required="" id="id_password"
+      placeholder="Password">
+    <div class="input" style="display: flex;">
+      <input type="submit" name="" value="로그인" style="flex:1">
+      <input type="submit" value="회원가입" onclick="location.href='{% url 'signup' %}'" style="flex:1">
+    </div>
+  </form>
 
 </body>
+
 </html>

@@ -21,13 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'j*w*7w$)9v$$w*m$2wc=)-(pd*!)la5#0&yipm_h5dzdlae9)c'
+# SECRET_KEY = 'j*w*7w$)9v$$w*m$2wc=)-(pd*!)la5#0&yipm_h5dzdlae9)c'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'j*w*7w$)9v$$w*m$2wc=)-(pd*!)la5#0&yipm_h5dzdlae9)c')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -52,7 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #static을 위한 코드
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'Naroproject.urls'
@@ -113,10 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-<<<<<<< HEAD
 # 한국어 지원
-=======
->>>>>>> 877b4e18626deaa51336f8caa621393acc5e00a3
 LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'UTC'
@@ -145,3 +145,8 @@ STATIC_ROOT = Path(BASE_DIR, 'static')
 # 해당 경로를 main_bf_login & main_af_login
 LOGIN_REDIRECT_URL = '/main_af_login'
 LOGOUT_REDIRECT_URL = '/'
+
+# Heroku 배포를 위한 추가
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)

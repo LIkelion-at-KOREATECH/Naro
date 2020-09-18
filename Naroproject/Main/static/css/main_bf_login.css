@@ -76,7 +76,7 @@ main.active p {opacity: 1; transform: translateY(0);}
     position: absolute;
     width: 530px;
     height: 390px;
-    top: 43%;
-    left: 60%;
+    top: 50%;
+    left: 75%;
 }
 

@@ -34,15 +34,8 @@ header nav a {
     display: inline-block; vertical-align: middle;
     padding: 5px; margin: 0 10px;
 }
-main,
-/* main{
-    display: block;
-    height: 100vh;
-    background-image: url(/static/images/MainPage.png); 
-    background-size: cover;
-} */
-main::before {height: 100vh;}
- main::before{
+
+main::before{
     content: "";
     display: block;
     height: 100vh;

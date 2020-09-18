@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap');
+
+/* main {
+    
+    height: 100vh;
+    background-image: url(/static/images/room.png);
+    background-size: cover;
+} */
+body{
+    margin: 0;
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/static/images/room.png);
+    background-size: cover;
+}
+
+.kit{
+    position: fixed;
+    width: 100px;
+    height: 86px;
+    object-fit: contain;
+    top: 21%;
+    left: 35%;
+    
+}
+
+.book{
+    position: fixed;
+    width: 300px;
+    height: 350px;
+    object-fit: contain;
+    top: 14.3%;
+    left: 54%;
+}
+
+.bed{
+    position: fixed;
+    width: 529px;
+    height: 389px;
+    object-fit: contain;
+    top: 56%;
+    left: 62%;
+}
+
+.input{
+    background-image: url(/static/images/bubble.png);
+}
+
+.bubble{
+    position: fixed;
+    width: 530px;
+    height: 390px;
+    object-fit: contain;
+    top: 43%;
+    left: 45%;
+}
+
+main form{
+    position: fixed;
+    width: 529px;
+    height: 389px;
+    object-fit: contain;
+    top: 45%;
+    left: 47%;
+}
+
+.a:hover{
+    background-color: powderblue;
+    transition: background-color .5s;
+}

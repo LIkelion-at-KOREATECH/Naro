@@ -52,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Naroproject.urls'
@@ -113,10 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-<<<<<<< HEAD
 # 한국어 지원
-=======
->>>>>>> 877b4e18626deaa51336f8caa621393acc5e00a3
 LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'UTC'

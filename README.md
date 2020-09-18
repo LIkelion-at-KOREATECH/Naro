@@ -2,6 +2,10 @@
 
 ![ver](https://img.shields.io/badge/ver-Django==3.1.1-blue.svg)
 ![ver](https://img.shields.io/badge/ver-pillow-blue.svg)
+gunicorn
+dj-database-url
+psycopg2-binary
+whitenoise
 
 ### 사용법
 

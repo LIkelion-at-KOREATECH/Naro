@@ -1,0 +1,1 @@
+web: gunicorn Naroproject.wsgi --log-file

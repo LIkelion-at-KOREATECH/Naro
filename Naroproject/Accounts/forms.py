@@ -40,18 +40,18 @@ class SignUpForm(forms.ModelForm) :
         min_length = 8,
         )
 
-    date_of_birth = forms.SplitDateTimeField(
-        label=('Date_of_Birth'),
-        required=True,
-        widget=forms.DateInput(
+    date_of_birth = forms.DateField(
+        label='Date of Birth',
+        widget=forms.SelectDateWidget(
             attrs={
+                'type' : 'date',
+                'class': 'form-control',
                 'required': 'True',
-                'placeholder' : '0000-00-00',
             },
-            format='%Y-%m-%d'
+            years=range(2020,1900,-1)
         ),
-        input_date_formats='%Y-%m-%d'
     )
+
     class Meta:
         model = User
         # fields에는 해당 모델에 대해 입력 받을 필드들을 나열한다.

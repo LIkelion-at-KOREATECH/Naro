@@ -10,7 +10,6 @@ def signup(request):
     if request.method == "POST":
         # POST일때 객체 생성
         signup_form = SignUpForm(request.POST)
-        print(signup_form)
         # 해당 폼의 유효성 검사가 유효하면 user_instance에 signup_form을 저장한다.
         if signup_form.is_valid():
             print("Success")
@@ -20,8 +19,9 @@ def signup(request):
             user_instance.set_password(signup_form.cleaned_data['password'])
             user_instance.save()
             # render 뒤쪽에 {'username':user_instance.username}을 넣어서 username이 나오도록 구현해준다.
-            return redirect(request, 'login', {'username':user_instance.username})
+            return redirect('login')
         else:
-            signup_form = SignUpForm()
+            # signup_form = SignUpForm()
             print("Fail")
+            print(signup_form)
     return render(request, 'registration/signup.html', {'form':signup_form.as_p})

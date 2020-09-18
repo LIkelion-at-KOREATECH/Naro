@@ -5,20 +5,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main_af_login.css' %}">
 </head>
 <body>
-    <header>
-
-    </header>
     <main>
-        <div class="go_login">
-            <a href="{% url 'login' %}">
-                <div class="login_box">
-                </div>
-                <p>LOGIN</p>
-            </a>
+        <div class="background">
+            <a><img src={% static 'images/kit.png' %} class="kit"></a>
+            <a><img src={% static 'images/book.png' %} class="book"></a>
+            <a><img src={% static 'images/bed.png' %} class="bed"></a>
+            <div class="bubble">
+                <img src="{% static 'images/bubble.png' %}">
+            </div>
+            <form>
+                <p><textarea placeholder="오늘 하루는 어땠어?"></textarea></p>
+                <p><input type="submit" value="Submit"></p>
+            </form>
         </div>
+
+
     </main>
 </body>
 </html>

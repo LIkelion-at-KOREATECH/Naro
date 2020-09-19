@@ -7,7 +7,6 @@ import random
 
 def signup(request):
     # request 방식이 POST이면 
-    print(request.body)
     signup_form = SignUpForm()
     if request.method == "POST":
         # email 추출

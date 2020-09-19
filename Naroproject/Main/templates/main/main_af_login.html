@@ -10,11 +10,14 @@
 <body>
     <main>
         <div class="background">
-            <a><img src={% static 'images/kit.png' %} class="kit"></a>
-            <a><img src={% static 'images/book.png' %} class="book"></a>
-            <a><img src={% static 'images/bed.png' %} class="bed"></a>
-            <div class="bubble">
-                <img src="{% static 'images/bubble.png' %}">
+            <!-- 빙화: static 따음표 넣었습니다. -->
+            <div class="big_kit"><a><img src="{% static 'images/kit.png' %}" class="kit"></a></div>
+            <div class="big_book"></div><a><img src="{% static 'images/book.png' %}" class="book"></a></div>
+            <div class="big_bed"><a><img src="{% static 'images/bed.png' %}" class="bed"></a></div>
+            <div class="big_bubble">
+                <div class="bubble">
+                    <img src="{% static 'images/bubble.png' %}">
+                </div>
             </div>
             <form class = "bubble_answer" action= "" method="POST">
                 {% csrf_token %}    

@@ -16,14 +16,29 @@ body{
     background-size: cover;
 }
 
+.big_kit{
+    height: 0;
+    padding-top: 5%;
+    margin-right: 25%;
+    background: url(../images/kit.png) no-repeat center;
+    background-size: contain;
+}
+
 .kit{
+    height: 0;
     position: fixed;
     width: 100px;
-    height: 86px;
     object-fit: contain;
     top: 21%;
     left: 35%;
-    
+}
+
+.big_book{
+    height: 0;
+    padding-top: 16%;
+    margin-left: 23%;
+    background: url(../images/book.png) no-repeat center;
+    background-size: contain;
 }
 
 .book{
@@ -33,9 +48,18 @@ body{
     object-fit: contain;
     top: 14.3%;
     left: 54%;
+    height: 0;
+}
+
+.big_bed{
+    height: 0;
+    padding-top: 16%;
+    background: url(../images/bed.png) no-repeat center;
+    background-size: contain;
 }
 
 .bed{
+    height: 0;
     position: fixed;
     width: 529px;
     height: 389px;

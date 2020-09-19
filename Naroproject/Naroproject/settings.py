@@ -143,8 +143,3 @@ STATIC_ROOT = Path(BASE_DIR, 'static')
 # 해당 경로를 main_bf_login & main_af_login
 LOGIN_REDIRECT_URL = '/main_af_login'
 LOGOUT_REDIRECT_URL = '/'
-
-# Heroku 배포를 위한 추가
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)

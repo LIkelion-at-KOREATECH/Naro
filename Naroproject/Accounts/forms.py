@@ -52,6 +52,33 @@ class SignUpForm(forms.ModelForm) :
         ),
     )
 
+    # MBTI 기능
+    MBTI_CHOICES = (
+        ('ISTJ', 'ISTJ'),
+        ('ISFJ','ISFJ'),
+        ('INFJ','INFJ'),
+        ('INTJ','INTJ'),
+        ('ISTP','ISTP'),
+        ('ISFP','ISFP'),
+        ('INFP','INFP'),
+        ('INTP','INTP'),
+        ('ESTP','ESTP'),
+        ('ESFP','ESFP'),
+        ('ENTP','ENTP'),
+        ('ENFP','ENFP'),
+        ('ESTJ','ESTJ'),
+        ('ESFJ','ESFJ'),
+        ('ENFJ','ENFJ'),
+        ('ENTJ','ENTJ'),
+    )
+    mbti_result = forms.ChoiceField(
+        required=False,
+        widget=forms.Select,
+        choices=MBTI_CHOICES,
+    )
+    
+    
+    
     class Meta:
         model = User
         # fields에는 해당 모델에 대해 입력 받을 필드들을 나열한다.
@@ -60,7 +87,8 @@ class SignUpForm(forms.ModelForm) :
             'email',
             'password',
             'Repeat_password',
-            'date_of_birth'
+            'date_of_birth',
+            'mbti_result',
             ]
         # clean_[필드명]을 통해 cleaned_data를 받아오고 이 받아온 데이터들 중 'password'와 'Repeat_password'를 확인하여 일치 하지 않으면 에러 메시지를 전송한다.
         def clean_Reapet_password(self):

@@ -10,6 +10,11 @@
 </head>
 
 <body>
+  {% if id %}
+    <script>
+      alert('{{ id}}');
+    </script>
+  {% endif %}
   <form class="box" method="POST">
     {% csrf_token %}
     <h1>Log in</h1>

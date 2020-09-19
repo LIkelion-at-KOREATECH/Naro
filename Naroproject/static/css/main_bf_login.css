@@ -4,6 +4,11 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 body {height: 100vh; overflow: hidden;}
 
+/* .container {
+    max-width: 1200px; margin: 0px auto;
+    position: relative;
+} */
+
 .container {
     max-width: 1200px;
     position: relative;

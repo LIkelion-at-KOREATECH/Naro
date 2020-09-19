@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -53,8 +53,6 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #static을 위한 코드
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -145,8 +143,3 @@ STATIC_ROOT = Path(BASE_DIR, 'static')
 # 해당 경로를 main_bf_login & main_af_login
 LOGIN_REDIRECT_URL = '/main_af_login'
 LOGOUT_REDIRECT_URL = '/'
-
-# Heroku 배포를 위한 추가
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)

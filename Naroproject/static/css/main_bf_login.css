@@ -69,7 +69,3 @@ main p:nth-child(1) {transform: translateY(50px);}
 main p:nth-child(2) {transform: translateY(75px);}
 main p:nth-child(3) {transform: translateY(100px);}
 main.active p {opacity: 1; transform: translateY(0);}
-<<<<<<< HEAD
-=======
-
->>>>>>> H_branch

@@ -25,21 +25,16 @@
             <p>멋쟁이사자처럼 8기,</p>
             <p>TEAM. 시공</p>
             <p>'나로'프로젝트</p>
-        
-            <div class="go_login">
-                <a href="{% url 'signup' %}">
-                    <div class="login_box">
-                        <p>login</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="bubble">
-                <img src="{% static 'images/bubble.png' %}">
-            </div>
+                
         </div>
-        
-        
+
+        <div class="bubble">
+            <img src="{% static 'images/bubble.png' %}">
+                <a href="{% url 'login' %}">
+                    안녕, 나는 나로야
+                </a>
+            </img>
+        </div>
     </main>
 
     <script>

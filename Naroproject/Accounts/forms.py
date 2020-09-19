@@ -52,6 +52,32 @@ class SignUpForm(forms.ModelForm) :
         ),
     )
 
+    # MBTI 기능
+    MBTI_CHOICES = (
+        ('ISTJ', 'ISTJ'),
+        ('ISFJ','ISFJ'),
+        ('INFJ','INFJ'),
+        ('INTJ','INTJ'),
+        ('ISTP','ISTP'),
+        ('ISFP','ISFP'),
+        ('INFP','INFP'),
+        ('INTP','INTP'),
+        ('ESTP','ESTP'),
+        ('ESFP','ESFP'),
+        ('ENTP','ENTP'),
+        ('ENFP','ENFP'),
+        ('ESTJ','ESTJ'),
+        ('ESFJ','ESFJ'),
+        ('ENFJ','ENFJ'),
+        ('ENTJ','ENTJ'),
+    )
+    mbti_result = forms.ChoiceField(
+        required=False,
+        widget=forms.Select,
+        choices=MBTI_CHOICES,
+    )
+    
+    
     class Meta:
         model = User
         # fields에는 해당 모델에 대해 입력 받을 필드들을 나열한다.

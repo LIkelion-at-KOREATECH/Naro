@@ -9,6 +9,12 @@
 body{
     margin: 0;
 }
+
+p {
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
 .background{
     width: 100vw;
     height: 100vh;
@@ -16,29 +22,14 @@ body{
     background-size: cover;
 }
 
-.big_kit{
-    height: 0;
-    padding-top: 5%;
-    margin-right: 25%;
-    background: url(../images/kit.png) no-repeat center;
-    background-size: contain;
-}
-
 .kit{
-    height: 0;
     position: fixed;
     width: 100px;
+    height: 86px;
     object-fit: contain;
     top: 21%;
     left: 35%;
-}
-
-.big_book{
-    height: 0;
-    padding-top: 16%;
-    margin-left: 23%;
-    background: url(../images/book.png) no-repeat center;
-    background-size: contain;
+    
 }
 
 .book{
@@ -48,18 +39,9 @@ body{
     object-fit: contain;
     top: 14.3%;
     left: 54%;
-    height: 0;
-}
-
-.big_bed{
-    height: 0;
-    padding-top: 16%;
-    background: url(../images/bed.png) no-repeat center;
-    background-size: contain;
 }
 
 .bed{
-    height: 0;
     position: fixed;
     width: 529px;
     height: 389px;
@@ -101,4 +83,55 @@ body main a{
 .a:hover{
     background-color: powderblue;
     transition: background-color .5s;
+}
+
+.white_cont_warp{
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+
+.big_white_content {
+    text-align: center;
+    position: absolute;
+    top: -30%;
+    left: -35%;
+}
+
+.about_today {
+    padding: 65px;
+}
+
+.white_content {
+    left:1px;
+    bottom: 15000x;
+    width: 500px;
+    height: 300px;
+    border: 7px solid black;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+    margin: 3px;
+}
+
+
+*{margin:0; padding:0;}
+.star{
+  display:inline-block;
+  width: 30px;height: 60px;
+  cursor: pointer;
+}
+.star_left{
+  background: url(http://gahyun.wooga.kr/main/img/testImg/star.png) no-repeat 0 0; 
+  background-size: 60px; 
+  margin-right: -3px;
+}
+.star_right{
+  background: url(http://gahyun.wooga.kr/main/img/testImg/star.png) no-repeat -30px 0; 
+  background-size: 60px; 
+  margin-left: -3px;
+}
+.star.on{
+  background-image: url(http://gahyun.wooga.kr/main/img/testImg/star_on.png);
 }

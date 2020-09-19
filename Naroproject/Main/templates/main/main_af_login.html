@@ -2,32 +2,89 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main_af_login.css' %}">
+
 </head>
+
 <body>
     <main>
         <div class="background">
-            <!-- 빙화: static 따음표 넣었습니다. -->
-            <div class="big_kit"><a><img src="{% static 'images/kit.png' %}" class="kit"></a></div>
-            <div class="big_book"></div><a><img src="{% static 'images/book.png' %}" class="book"></a></div>
-            <div class="big_bed"><a><img src="{% static 'images/bed.png' %}" class="bed"></a></div>
-            <div class="big_bubble">
-                <div class="bubble">
-                    <img src="{% static 'images/bubble.png' %}">
-                </div>
+            <a><img src={% static 'images/kit.png' %} class="kit"></a>
+            <a><img src={% static 'images/book.png' %} class="book"></a>
+            <a><img src={% static 'images/bed.png' %} class="bed"></a>
+            <script src="https://code.jquery.com/jquery-3.5.1.js"
+                integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+            <div class="bubble">
+                <img src="{% static 'images/bubble.png' %}">
             </div>
-            <form class = "bubble_answer" action= "" method="POST">
-                {% csrf_token %}    
+            <form class="bubble_answer" action="" method="POST">
+                {% csrf_token %}
                 <p><textarea placeholder="오늘 하루는 어땠어?"></textarea></p>
-                <p><input type="submit" value="말하기"></p>
+                <p>
+
+                    <p>
+                        <a href="javascript:void(0)"
+                            onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">말하기</a>
+                    </p>
+                    <div id="light">
+                        <div class="white_content_warp">
+                            <div class="big_white_content">
+
+                                <div class="white_content">
+
+                                    <p> 오늘 하루는 어땠나요? </p>
+
+
+                                    <div class="big_about_today">
+                                        <input type="text" class="about_today">
+                                    </div>
+
+
+                                    <div class="star-box">
+                                        <span class="star star_left"></span>
+                                        <span class="star star_right"></span>
+
+                                        <span class="star star_left"></span>
+                                        <span class="star star_right"></span>
+
+                                        <span class="star star_left"></span>
+                                        <span class="star star_right"></span>
+
+                                        <span class="star star_left"></span>
+                                        <span class="star star_right"></span>
+
+                                        <span class="star star_left"></span>
+                                        <span class="star star_right"></span>
+                                    </div>
+
+                                    <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">별점평가</a>
+
+                                </div>
+
+                            </div>
+
+                            <div id="fade" class="black_overlay"></div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </p>
             </form>
         </div>
 
 
 
     </main>
+
+    <script type="text/javascript" src="{% static 'js/star.js' %}"></script>
+
 </body>
+
 </html>
